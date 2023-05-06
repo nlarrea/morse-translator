@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #344e41;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #A3B18A;
+}
+
+p {
+  color: #588157;
+}
+
+main {
+  width: 80%;
+}/*# sourceMappingURL=styles.css.map */

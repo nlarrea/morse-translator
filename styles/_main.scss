@@ -1,0 +1,28 @@
+@use "colors";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: colors.$bg;
+
+    display: grid;
+    place-items: center;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: colors.$second-light;
+}
+
+p {
+    color: colors.$main;
+}
+
+main {
+    width: 80%;
+}
