@@ -9,16 +9,39 @@ body {
   display: grid;
   place-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #DAD7CD;
 }
 
 h1 {
   color: #A3B18A;
 }
 
-p {
-  color: #588157;
+#socials {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+#socials a {
+  color: #A3B18A;
+  text-decoration: none;
+}
+#socials a:hover, #socials a:focus {
+  outline: none;
+  color: #DAD7CD;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  text-align: center;
 }
 
 main {
   width: 80%;
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */

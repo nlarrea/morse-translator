@@ -9,35 +9,38 @@
     <script src="https://kit.fontawesome.com/618d39b4da.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav id="socials"> <!-- links to socials -->
+        <a href="https://github.com/nlarrea/morse-translator" target="_blank">
+            <i class="fa-solid fa-chain"></i>
+        </a>
+        <a href="http://github.com/nlarrea" target="_blank">
+            <i class="fa-brands fa-github-alt"></i>
+        </a>
+        <a href="https://twitter.com/nlarrea_" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/n.loust/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </nav>
+
+    <header>
+        <h1>Morse Translator</h1>
+        <p>Welcome! Write your words or sentences to get the translation!</p>
+    </header>
+
     <main>
         <section> <!-- user prompts -->
-            <nav> <!-- links to socials -->
-                <a href="http://github.com/nlarrea" target="_blank">
-                    <i class="fa-brands fa-github-alt"></i>
-                </a>
-                <a href="https://twitter.com/nlarrea_" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/n.loust/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </nav>
-
-            <header>
-                <h1>Morse Code</h1>
-                <p>Welcome! Write your words or sentences to get the translation!</p>
-            </header>
-            
             <form>
                 <div>
                     <label for="text-to-morse">Text to translate:</label>
-                    <input type="text" name="text-to-morse" id="text-to-morse">
+                    <textarea name="text-to-morse" id="text-to-morse" cols="30" rows="10"></textarea>
                 </div>
             </form>
         </section>
 
         <section> <!-- show results -->
-
+            
         </section>
     </main>
 </body>
