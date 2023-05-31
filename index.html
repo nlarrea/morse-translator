@@ -31,16 +31,26 @@
 
     <main>
         <section> <!-- user prompts -->
-            <form>
-                <div>
-                    <label for="text-to-morse">Text to translate:</label>
-                    <textarea name="text-to-morse" id="text-to-morse" cols="30" rows="10"></textarea>
-                </div>
-            </form>
+            <div>
+                <textarea
+                name="text-to-translate"
+                id="text-to-translate"
+                placeholder="Type text or Morse code using '.' or '-', using spaces between letters and '/' between words."
+                ></textarea>
+                
+                <button id="btn-clear">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
         </section>
 
         <section> <!-- show results -->
-            
+            <textarea
+                name="translated-text"
+                id="translated-text"
+                readonly
+                placeholder="The translated message appears here. '#' indicates an untranslatable text."
+            ></textarea>
         </section>
     </main>
 </body>

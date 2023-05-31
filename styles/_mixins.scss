@@ -1,0 +1,41 @@
+@use "./variables";
+
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    background-color: variables.$hunyadi-yellow;
+    color: variables.$dark-slate-gray;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: variables.$vanilla;
+    }
+}
+
+@mixin base-input {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    resize: none;
+    outline: none;
+
+    background-color: variables.$dark-slate-gray;
+    color: variables.$vanilla;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Hack', monospace;
+
+    &::placeholder {
+        color: variables.$vanilla;
+        opacity: 0.6;
+    }
+}

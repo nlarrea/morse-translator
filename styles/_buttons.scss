@@ -1,0 +1,9 @@
+@use "./variables";
+@use "./mixins";
+
+#btn-clear {
+    @include mixins.base-btn();
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+}

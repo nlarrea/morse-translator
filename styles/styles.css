@@ -5,15 +5,19 @@
 }
 
 body {
-  background-color: #344e41;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #540B0E;
   display: grid;
   place-items: center;
+  grid-template-rows: 25% auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #DAD7CD;
+  color: #E09F3E;
 }
 
 h1 {
-  color: #A3B18A;
+  color: #FFF3B0;
 }
 
 #socials {
@@ -26,12 +30,12 @@ h1 {
   gap: 15px;
 }
 #socials a {
-  color: #A3B18A;
+  color: #E09F3E;
   text-decoration: none;
 }
 #socials a:hover, #socials a:focus {
   outline: none;
-  color: #DAD7CD;
+  color: #FFF3B0;
 }
 
 header {
@@ -43,5 +47,90 @@ header {
 
 main {
   width: 80%;
+  height: 90%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+section {
+  width: 100%;
+  height: calc(50% - 10px);
+  display: grid;
+  place-items: center;
+}
+section div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section div button {
+  margin: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#btn-clear {
+  cursor: pointer;
+  height: 42px;
+  font-size: 1em;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  background-color: #E09F3E;
+  color: #335C67;
+  height: 32px;
+  width: 32px;
+  border-radius: 8px;
+}
+#btn-clear:active, #btn-clear:focus {
+  outline: none;
+}
+#btn-clear:hover {
+  color: #FFF3B0;
+}
+
+#text-to-translate {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  resize: none;
+  outline: none;
+  background-color: #335C67;
+  color: #FFF3B0;
+  border: none;
+  font-size: 1.2em;
+  font-family: "Hack", monospace;
+}
+#text-to-translate::-moz-placeholder {
+  color: #FFF3B0;
+  opacity: 0.6;
+}
+#text-to-translate::placeholder {
+  color: #FFF3B0;
+  opacity: 0.6;
+}
+
+#translated-text {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  resize: none;
+  outline: none;
+  background-color: #335C67;
+  color: #FFF3B0;
+  border: none;
+  font-size: 1.2em;
+  font-family: "Hack", monospace;
+}
+#translated-text::-moz-placeholder {
+  color: #FFF3B0;
+  opacity: 0.6;
+}
+#translated-text::placeholder {
+  color: #FFF3B0;
+  opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */

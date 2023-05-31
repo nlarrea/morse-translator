@@ -1,0 +1,10 @@
+@use "./variables";
+@use "./mixins";
+
+#text-to-translate {
+    @include mixins.base-input();
+}
+
+#translated-text {
+    @include mixins.base-input();
+}
