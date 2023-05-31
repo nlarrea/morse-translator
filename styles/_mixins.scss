@@ -2,20 +2,31 @@
 
 @mixin base-btn {
     cursor: pointer;
-    height: 42px;
+
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
     font-size: 1em;
     font-weight: 500;
+    
     border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: variables.$bg;
+    color: variables.$light;
     transition: all 0.3s ease-in-out;
-    background-color: variables.$hunyadi-yellow;
-    color: variables.$dark-slate-gray;
 
     &:active, &:focus {
-        outline: none;
+        outline-width: 1px;
+        outline-color: variables.$details;
+        outline-style: solid;
     }
 
     &:hover {
-        color: variables.$vanilla;
+        outline: none;
+        background-color: variables.$btn-bg;
     }
 }
 
@@ -28,14 +39,19 @@
     resize: none;
     outline: none;
 
-    background-color: variables.$dark-slate-gray;
-    color: variables.$vanilla;
+    background-color: variables.$secondary;
+    color: variables.$light;
     border: none;
+    border-radius: 16px;
     font-size: 1.2em;
     font-family: 'Hack', monospace;
 
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+
     &::placeholder {
-        color: variables.$vanilla;
+        color: variables.$light;
         opacity: 0.6;
     }
 }

@@ -26,7 +26,7 @@
     </nav>
 
     <header>
-        <h1>Morse Translator</h1>
+        <img src="./static/assets/images/morse_translator-logo.png" alt="logo">
         <p><strong>Welcome!</strong> Write your words or sentences to get the translation!</p>
     </header>
 
@@ -36,6 +36,7 @@
                 <textarea
                 name="text-to-translate"
                 id="text-to-translate"
+                spellcheck="false"
                 placeholder="Type text or Morse code using '.' or '-', using spaces between letters and '/' between words."
                 ></textarea>
                 
@@ -46,12 +47,18 @@
         </section>
 
         <section> <!-- show results -->
-            <textarea
+            <div>
+                <textarea
                 name="translated-text"
                 id="translated-text"
                 readonly
-                placeholder="The translated message appears here. '#' indicates an untranslatable text."
-            ></textarea>
+                placeholder="The translated message appears here."
+                ></textarea>
+                
+                <button id="btn-copy">
+                    <i class="fa-solid fa-clone"></i>
+                </button>
+            </div>
         </section>
     </main>
 </body>

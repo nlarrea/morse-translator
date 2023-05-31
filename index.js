@@ -2,6 +2,7 @@ const textInput = document.querySelector('#text-to-translate');
 const textOutput = document.querySelector('#translated-text');
 
 const clearBtn = document.querySelector('#btn-clear');
+const copyBtn = document.querySelector('#btn-copy');
 
 const morseDictionary = {
     // numbers
@@ -19,14 +20,30 @@ const morseDictionary = {
     '(': '-.--.', ':': '---...', ',': '--..--', '=': '-...-',
     '!': '-.-.--', '.': '.-.-.-', '-': '-....-', '*': '-..-',
     '%': '----- -..-. -----', '+': '.-.-.', '"': '.-..-.',
-    '?': '..--..', '/': '-..-.', ' ': '/'
+    '?': '..--..', '/': '-..-.', ' ': '/', '\n': '\n', '': ' '
 };
 
 
 clearBtn.addEventListener('click', evt => {
     textInput.value = '';
     textOutput.value = '';
+
+    clearBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    
+    setTimeout(() => {
+        clearBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+    }, 2000);
 });
+
+copyBtn.addEventListener('click', evt => {
+    navigator.clipboard.writeText(textOutput.value);
+
+    copyBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+
+    setTimeout(() => {
+        copyBtn.innerHTML = `<i class="fa-solid fa-clone"></i>`;
+    }, 2000);
+})
 
 
 textInput.addEventListener('keyup', evt => {

@@ -8,16 +8,12 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: #540B0E;
+  background-color: #24324c;
   display: grid;
   place-items: center;
   grid-template-rows: 25% auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #E09F3E;
-}
-
-h1 {
-  color: #FFF3B0;
+  color: #dc762b;
 }
 
 #socials {
@@ -30,34 +26,39 @@ h1 {
   gap: 15px;
 }
 #socials a {
-  color: #E09F3E;
+  color: #0e8fd8;
   text-decoration: none;
 }
 #socials a:hover, #socials a:focus {
   outline: none;
-  color: #FFF3B0;
+  color: #bdebff;
 }
 
 header {
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr;
-  place-content: center;
+  place-items: center;
+  gap: 15px;
   text-align: center;
+}
+header img {
+  width: 50%;
 }
 
 main {
   width: 80%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 section {
   width: 100%;
   height: calc(50% - 10px);
+  padding: 0 20px 20px;
   display: grid;
   place-items: center;
 }
@@ -73,24 +74,28 @@ section div button {
   right: 0;
 }
 
-#btn-clear {
+textarea ~ button {
   cursor: pointer;
-  height: 42px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
   font-size: 1em;
   font-weight: 500;
   border: 1px solid transparent;
-  transition: all 0.3s ease-in-out;
-  background-color: #E09F3E;
-  color: #335C67;
-  height: 32px;
-  width: 32px;
   border-radius: 8px;
+  background-color: #24324c;
+  color: #bdebff;
+  transition: all 0.3s ease-in-out;
 }
-#btn-clear:active, #btn-clear:focus {
+textarea ~ button:active, textarea ~ button:focus {
+  outline-width: 1px;
+  outline-color: #dc762b;
+  outline-style: solid;
+}
+textarea ~ button:hover {
   outline: none;
-}
-#btn-clear:hover {
-  color: #FFF3B0;
+  background-color: #0e8fd8;
 }
 
 #text-to-translate {
@@ -99,18 +104,20 @@ section div button {
   padding: 20px;
   resize: none;
   outline: none;
-  background-color: #335C67;
-  color: #FFF3B0;
+  background-color: #2a3e5f;
+  color: #bdebff;
   border: none;
+  border-radius: 16px;
   font-size: 1.2em;
   font-family: "Hack", monospace;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 #text-to-translate::-moz-placeholder {
-  color: #FFF3B0;
+  color: #bdebff;
   opacity: 0.6;
 }
 #text-to-translate::placeholder {
-  color: #FFF3B0;
+  color: #bdebff;
   opacity: 0.6;
 }
 
@@ -120,17 +127,19 @@ section div button {
   padding: 20px;
   resize: none;
   outline: none;
-  background-color: #335C67;
-  color: #FFF3B0;
+  background-color: #2a3e5f;
+  color: #bdebff;
   border: none;
+  border-radius: 16px;
   font-size: 1.2em;
   font-family: "Hack", monospace;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 #translated-text::-moz-placeholder {
-  color: #FFF3B0;
+  color: #bdebff;
   opacity: 0.6;
 }
 #translated-text::placeholder {
-  color: #FFF3B0;
+  color: #bdebff;
   opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */
