@@ -20,7 +20,7 @@ const morseDictionary = {
     '(': '-.--.', ':': '---...', ',': '--..--', '=': '-...-',
     '!': '-.-.--', '.': '.-.-.-', '-': '-....-', '*': '-..-',
     '%': '----- -..-. -----', '+': '.-.-.', '"': '.-..-.',
-    '?': '..--..', '/': '-..-.', ' ': '/', '\n': '\n', '': ' '
+    '?': '..--..', '/': '-..-.', ' ': '/', '\n': '\n'
 };
 
 
@@ -67,7 +67,7 @@ textInput.addEventListener('keyup', evt => {
  * @returns {boolean}
  */
 function checkIsMorse(text) {
-    const morseSymbols = ['.', '-', '/', ' '];
+    const morseSymbols = ['.', '-', '/', ' ', '\n'];
     
     for (let char of text) {
         if (!morseSymbols.includes(char)) {
@@ -84,7 +84,7 @@ function morseToText(message) {
         return Object.keys(object).find(key => object[key] === value);
     }
 
-    const msgList = message.split(' ');
+    const msgList = message.replace(/\n/g, ' \n ').split(' ');
     const translatedList = msgList.map(char => getKeyByValue(morseDictionary, char));
 
     return translatedList.join('');
@@ -93,7 +93,7 @@ function morseToText(message) {
 
 function textToMorse(message) {
     const msgList = message.toLowerCase().split('');
-    const translatedList = msgList.map(char => morseDictionary[char] + ' ');
+    const translatedList = msgList.map(char => morseDictionary[char] + ((char === '\n')? '' : ' '));
     
     return translatedList.join('');
 }
