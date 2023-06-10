@@ -6,6 +6,8 @@ This is a simple Morse translator that can translate from Morse to English and v
 
 It is written using HTML, SCSS, and JavaScript.
 
+If the translator can not translate the text, it will display the text as it is.
+
 <div align="center">
 
 ![Morse Translator](./static/assets/images/web_page_view.png)
@@ -19,7 +21,7 @@ It is written using HTML, SCSS, and JavaScript.
 
 ## How to use
 
-To use the translator, simply type in the text you want to translate in the input box. The output will be displayed in the output box as soon as you type in the text. You can also copy the text from the output box by clicking the copy button.
+To use the [Morse Translator](https://nlarrea.github.io/morse-translator/), simply type in the text you want to translate in the input box. The output will be displayed in the output box as soon as you type in the text. You can also copy the text from the output box by clicking the copy button.
 
 <br/>
 

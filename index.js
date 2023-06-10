@@ -93,7 +93,13 @@ function morseToText(message) {
 
 function textToMorse(message) {
     const msgList = message.toLowerCase().split('');
-    const translatedList = msgList.map(char => morseDictionary[char] + ((char === '\n')? '' : ' '));
+    const translatedList = msgList.map(char => {
+        if (morseDictionary[char]) {
+            return morseDictionary[char] + ((char === '\n')? '' : ' ');
+        } else {
+            return char;
+        }
+    });
     
     return translatedList.join('');
 }
