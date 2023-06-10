@@ -23,7 +23,20 @@ If the translator can not translate the text, it will display the text as it is.
 
 To use the [Morse Translator](https://nlarrea.github.io/morse-translator/), simply type in the text you want to translate in the input box. The output will be displayed in the output box as soon as you type in the text. You can also copy the text from the output box by clicking the copy button.
 
-<br/>
+While typing in Morse, follow these rules:
+
+* Write each word separated by: `space` + `/` + `space`.
+* Write each letter separated by: `space`.
+
+For example, to write `Hello World` in Morse, you would write:
+
+```
+.... . .-.. .-.. --- / .-- --- .-. .-.. -..
+```
+
+
+<br/><hr/><br/>
+
 
 **Coming soon:**
 
