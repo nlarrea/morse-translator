@@ -16,6 +16,16 @@ body {
   color: #dc762b;
 }
 
+::-moz-selection {
+  color: #2a3e5f;
+  background-color: #bdebff;
+}
+
+::selection {
+  color: #2a3e5f;
+  background-color: #bdebff;
+}
+
 #socials {
   position: absolute;
   top: 5px;
@@ -110,6 +120,8 @@ textarea ~ button:hover {
   border-radius: 16px;
   font-size: 1.2em;
   font-family: "Hack", monospace;
+  overflow-wrap: normal;
+  word-wrap: normal;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 #text-to-translate::-moz-placeholder {
@@ -133,6 +145,8 @@ textarea ~ button:hover {
   border-radius: 16px;
   font-size: 1.2em;
   font-family: "Hack", monospace;
+  overflow-wrap: normal;
+  word-wrap: normal;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 #translated-text::-moz-placeholder {

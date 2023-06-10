@@ -22,6 +22,11 @@ body {
     color: variables.$details;
 }
 
+::selection {
+    color: variables.$secondary;
+    background-color: variables.$light;
+}
+
 #socials {
     position: absolute;
     top: 5px;
