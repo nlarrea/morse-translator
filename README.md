@@ -42,7 +42,7 @@ For example, to write `Hello World` in Morse, you would write:
 
 * [ ] Add a button to listen to the Morse code.
 * [ ] Add a button to download the Morse code as an audio file.
-* [ ] Add a button to change the text from the output box to the input box.
+* [x] Add a button to change the text from the output box to the input box.
 
 
 <br/><hr/>

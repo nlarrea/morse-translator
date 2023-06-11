@@ -3,6 +3,7 @@ const textOutput = document.querySelector('#translated-text');
 
 const clearBtn = document.querySelector('#btn-clear');
 const copyBtn = document.querySelector('#btn-copy');
+const changeInputBtn = document.querySelector('#btn-change-input');
 
 const morseDictionary = {
     // numbers
@@ -43,7 +44,11 @@ copyBtn.addEventListener('click', evt => {
     setTimeout(() => {
         copyBtn.innerHTML = `<i class="bi bi-front"></i>`;
     }, 2000);
-})
+});
+
+changeInputBtn.addEventListener('click', evt => {
+    [textInput.value, textOutput.value] = [textOutput.value, textInput.value];
+});
 
 
 textInput.addEventListener('keyup', evt => {
