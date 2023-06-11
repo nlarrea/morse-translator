@@ -7,7 +7,10 @@
     <title>Morse Code</title>
     <link rel="shortcut icon" type="image/x-icon" href="./static/favicon.png">
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/618d39b4da.js" crossorigin="anonymous"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <nav id="socials"> <!-- links to socials -->
@@ -31,7 +34,7 @@
     </header>
 
     <main>
-        <section> <!-- user prompts -->
+        <section> <!-- user prompts (inputs) -->
             <div>
                 <textarea
                 name="text-to-translate"
@@ -40,13 +43,19 @@
                 placeholder="Type text or Morse code using '.' or '-', using spaces between letters and '/' between words."
                 ></textarea>
                 
-                <button id="btn-clear">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
+                <div class="buttons-wrapper">
+                    <button id="btn-change-input">
+                        <i class="bi bi-arrow-down-up"></i>
+                    </button>
+
+                    <button id="btn-clear">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section> <!-- show results -->
+        <section> <!-- show results (outputs) -->
             <div>
                 <textarea
                 name="translated-text"
@@ -55,9 +64,11 @@
                 placeholder="The translated message appears here."
                 ></textarea>
                 
-                <button id="btn-copy">
-                    <i class="fa-solid fa-clone"></i>
-                </button>
+                <div class="buttons-wrapper">
+                    <button id="btn-copy">
+                        <i class="bi bi-front"></i>
+                    </button>
+                </div>
             </div>
         </section>
     </main>

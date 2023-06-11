@@ -28,20 +28,20 @@ clearBtn.addEventListener('click', evt => {
     textInput.value = '';
     textOutput.value = '';
 
-    clearBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    clearBtn.innerHTML = `<i class="bi bi-check2"></i>`;
     
     setTimeout(() => {
-        clearBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+        clearBtn.innerHTML = `<i class="bi bi-trash-fill"></i>`;
     }, 2000);
 });
 
 copyBtn.addEventListener('click', evt => {
     navigator.clipboard.writeText(textOutput.value);
 
-    copyBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    copyBtn.innerHTML = `<i class="bi bi-check2"></i>`;
 
     setTimeout(() => {
-        copyBtn.innerHTML = `<i class="fa-solid fa-clone"></i>`;
+        copyBtn.innerHTML = `<i class="bi bi-front"></i>`;
     }, 2000);
 })
 

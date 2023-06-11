@@ -1,6 +1,6 @@
 @use "./variables";
 @use "./mixins";
 
-textarea ~ button {
+textarea ~ div button {
     @include mixins.base-btn();
 }

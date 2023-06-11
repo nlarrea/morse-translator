@@ -80,14 +80,24 @@ section div {
   height: 100%;
   position: relative;
 }
-section div button {
-  margin: 15px;
+section div .buttons-wrapper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-end;
+}
+section div .buttons-wrapper button {
+  position: relative;
 }
 
-textarea ~ button {
+textarea ~ div button {
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -101,12 +111,12 @@ textarea ~ button {
   color: #bdebff;
   transition: all 0.3s ease-in-out;
 }
-textarea ~ button:active, textarea ~ button:focus {
+textarea ~ div button:active, textarea ~ div button:focus {
   outline-width: 1px;
   outline-color: #dc762b;
   outline-style: solid;
 }
-textarea ~ button:hover {
+textarea ~ div button:hover {
   outline: none;
   background-color: #0e8fd8;
 }

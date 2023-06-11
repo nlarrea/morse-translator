@@ -90,11 +90,23 @@ section {
         height: 100%;
         position: relative;
         
-        button {
-            margin: 15px;
+        .buttons-wrapper {
+            width: 100%;
+            height: fit-content;
+            padding: 15px;
+
             position: absolute;
             bottom: 0;
-            right: 0;
-        }
+            left: 0;
+
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                position: relative;
+            }
+        } 
     }
 }
