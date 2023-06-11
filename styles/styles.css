@@ -55,6 +55,9 @@ header {
 header img {
   width: 50%;
 }
+header p {
+  display: block;
+}
 
 main {
   width: 80%;
@@ -156,4 +159,19 @@ textarea ~ button:hover {
 #translated-text::placeholder {
   color: #bdebff;
   opacity: 0.6;
+}
+
+@media (max-width: 992px) {
+  #socials {
+    flex-direction: column;
+    right: 15px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    grid-template-rows: 20% auto;
+  }
+  main {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */

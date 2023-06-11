@@ -1,0 +1,19 @@
+@use "./variables";
+
+@media (max-width: 992px){
+    #socials {
+        flex-direction: column;
+
+        right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        grid-template-rows: 20% auto;
+    }
+
+    main {
+        width: 90%;
+    }
+}
