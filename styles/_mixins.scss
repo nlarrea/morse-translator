@@ -45,8 +45,7 @@
     border-radius: 16px;
     font-size: 1.2em;
     font-family: 'Hack', monospace;
-    overflow-wrap: normal;
-    word-wrap: normal;
+    white-space: pre-line;
 
     -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
