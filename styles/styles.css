@@ -28,7 +28,7 @@ body {
 
 #socials {
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 20px;
   display: flex;
   align-items: center;
@@ -178,6 +178,9 @@ textarea ~ div button:hover {
 @media (max-width: 576px) {
   body {
     grid-template-rows: 20% auto;
+  }
+  header > p {
+    width: 70%;
   }
   main {
     width: 90%;

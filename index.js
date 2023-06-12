@@ -108,3 +108,12 @@ function textToMorse(message) {
     
     return translatedList.join('');
 }
+
+
+/** MORSE TIMING
+ * . = 1 unit
+ * - = 3 units
+ * Gap between . and - within a character = 1 unit
+ * Gap between the characters of a word = 3 units
+ * Gap between two words = 7 units
+*/
