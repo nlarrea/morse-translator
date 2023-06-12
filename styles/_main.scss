@@ -41,9 +41,53 @@ body {
         color: variables.$btn-bg;
         text-decoration: none;
 
+        position: relative;
+
         &:hover, &:focus {
             outline: none;
             color: variables.$light;
+
+            .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+
+            padding: 5px 10px;
+            background-color: variables.$secondary;
+            color: variables.$details;
+            text-align: center;
+            border-radius: 6px;
+            border-top-right-radius: 0;
+            white-space: nowrap;
+
+            -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+            
+            /* tooltip position */
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            right: 8px; /* half of the icon width */
+
+            /* fade in */
+            opacity: 0;
+            transition: opacity 0.3s;
+
+            /* tooltip arrow */
+            &::after {
+                content: '';
+                border-left: 12px solid transparent;
+                border-bottom: 8px solid variables.$secondary;
+
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+            }
         }
     }
 }

@@ -38,10 +38,43 @@ body {
 #socials a {
   color: #0e8fd8;
   text-decoration: none;
+  position: relative;
 }
 #socials a:hover, #socials a:focus {
   outline: none;
   color: #bdebff;
+}
+#socials a:hover .tooltip-text, #socials a:focus .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+#socials a .tooltip-text {
+  visibility: hidden;
+  padding: 5px 10px;
+  background-color: #2a3e5f;
+  color: #dc762b;
+  text-align: center;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  white-space: nowrap;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  /* tooltip position */
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  right: 8px; /* half of the icon width */
+  /* fade in */
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* tooltip arrow */
+}
+#socials a .tooltip-text::after {
+  content: "";
+  border-left: 12px solid transparent;
+  border-bottom: 8px solid #2a3e5f;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
 }
 
 header {
@@ -173,6 +206,21 @@ textarea ~ div button:hover {
   #socials {
     flex-direction: column;
     right: 15px;
+  }
+  #socials a .tooltip-text {
+    top: 50%;
+    right: 175%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+  }
+  #socials a .tooltip-text::after {
+    border-left: 8px solid #2a3e5f;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
   }
 }
 @media (max-width: 576px) {

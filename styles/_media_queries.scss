@@ -5,6 +5,24 @@
         flex-direction: column;
 
         right: 15px;
+
+        a .tooltip-text {
+            top: 50%;
+            right: 175%;
+            transform: translateY(-50%);
+            border-radius: 6px;
+
+            &::after {
+                border-left: 8px solid variables.$secondary;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+            }
+        }
     }
 }
 
